@@ -1,7 +1,8 @@
 {
   "private": true,
+  "version": "1.0.0",
   "name": "couponmuasam",
-  "homepage": "https://couponmuasam.com",
+  "homepage": "https://beta.couponmuasam.com",
   "twitter": "dungnt8805",
   "repository": "https://github.com/spiritwild/couponms.git",
   "scripts": {
@@ -11,7 +12,9 @@
     "start": "phenomic start",
     "build": "phenomic build",
     "pretest": "npm run lint",
-    "test": "npm run build"
+    "test": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "./scripts/deploy.sh"
   },
   "googleAnalyticsUA": "UA-76984179-1",
   "phenomic": {
