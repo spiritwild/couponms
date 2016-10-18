@@ -4,8 +4,6 @@ import invariant from "invariant"
 import { BodyContainer, joinUri } from "phenomic"
 import Link from "phenomic/lib/Link"
 
-import styles from "./index.css"
-
 const Page = (
   {
     __filename,
@@ -51,8 +49,7 @@ const Page = (
       <div className="single_post">
         <div id="content_bg" className="singleCon">
           <div className="breadcrumb">
-            <Link to="/" title="">Trang chủ</Link>
-            &nbsp;&nbsp;&raquo;&nbsp;&nbsp;
+            <Link to="/" title="">Trang chủ</Link>&nbsp;&nbsp;&raquo;&nbsp;&nbsp;
           </div>
           <header>
             <h1 className="title single-title">

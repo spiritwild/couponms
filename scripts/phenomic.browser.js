@@ -14,14 +14,11 @@ phenomicClient({ metadata, routes, store })
 
 require.context("../content", true, /\.(html|ico|jpe?g|png|gif|jpg)$/)
 
-
 // md files processed via phenomic-loader to JSON & generate collection
 
 let mdContext = require.context("../content", true, /\.md$/)
 
 mdContext.keys().forEach(mdContext)
-
-
 
 // hot loading
 if (module.hot) {

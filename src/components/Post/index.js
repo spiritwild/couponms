@@ -16,9 +16,8 @@ const Post = ({ post }) => {
             </div>
           </span>
           <span className="thecategories">
-            { "Danh mục: " }
-
-          </span>&nbsp;|&nbsp;
+            
+          </span>
           {
             post.tags &&
               <span className="tags">
@@ -35,7 +34,7 @@ const Post = ({ post }) => {
           post.thumbnail &&
           <div className="featured-thumbnail">
             <Link to={ post.__url } title={ post.title } rel="nofollow">
-              <img src={ post.__url + '/' + post.thumbnail }/>
+              <img src={ post.__url + "/" + post.thumbnail } />
             </Link>
           </div>
         }
