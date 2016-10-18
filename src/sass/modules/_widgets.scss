@@ -1,0 +1,48 @@
+.widget {
+  margin-bottom: 27px;
+  overflow: hidden;
+  h3 {
+    font-size: 22px;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+#widget-mailchimp {
+  font-size: 15px;
+  background-color: #e0e8cc;
+  text-align: center;
+  h3 {
+    color: $headings-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 20px;
+
+  }
+  p {
+    margin: 8px 0 2px;
+    padding: 0 10px;
+  }
+  form {
+    padding-bottom: 10px;
+  }
+  input[type='text'], input[type='email'] {
+    border: 1px solid darken($light-grey, 25%);
+    color: darken($headings-color, 25%);
+    font-size: 15px;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  input[type='submit'] {
+    background: $green;
+    color: $white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 15px;
+    text-shadow: -1px -1px #1c5d28;
+    height: 40px;
+  }
+}

@@ -124,13 +124,19 @@ export default (config = {}) => {
         },
         // *.global.css => global (normal) css
         {
-          test: /\.global\.css$/,
+          test: /\.scss$/,
           include: path.resolve(__dirname, "src"),
-          // webpack 1
           loader: ExtractTextPlugin.extract(
             "style-loader",
-            [ "css-loader", "postcss-loader" ].join("!"),
+            [ "css-loader", "sass-loader" ].join("!"),
           ),
+          // test: /\.global\.css$/,
+          // include: path.resolve(__dirname, "src"),
+          // // webpack 1
+          // loader: ExtractTextPlugin.extract(
+          //   "style-loader",
+          //   [ "css-loader", "postcss-loader" ].join("!"),
+          // ),
           // webpack 2
           /*
           loader: ExtractTextPlugin.extract({
@@ -202,20 +208,43 @@ export default (config = {}) => {
         // https://github.com/webpack/less-loader
 
         // copy assets and return generated path in js
+        // {
+        //   test: /content(\/|\\).*\.(html|ico|jpe?g|png|gif)$/,
+        //   loader: "file-loader?name=[path][name].[ext]&context=./content",
+        // },
+        // {
+        //   test: /\.(html|ico|jpe?g|png|gif)$/,
+        //   loader: "file-loader",
+        //   query: {
+        //     name: "[path][name].[hash].[ext]",
+        //     context: path.join(__dirname, config.source),
+        //   },
+        // },
+
         {
-          test: /\.(html|ico|jpe?g|png|gif)$/,
+          test: /content(\/|\\).*\.(html|ico|jpe?g|png|gif)$/,
+          loader: "file-loader?name=[path][name].[ext]&context=./content",
+        },
+        {
+          test: /src(\/|\\).*\.(html|ico|jpe?g|png|gif)$/,
           loader: "file-loader",
           query: {
-            name: "[path][name].[hash].[ext]",
-            context: path.join(__dirname, config.source),
+            name: "images/[path][name].[ext]",
+            context: "./src",
           },
         },
 
         // svg as raw string to be inlined
+        // {
+        //   test: /\.svg$/,
+        //   loader: "raw-loader",
+        // },
         {
-          test: /\.svg$/,
-          loader: "raw-loader",
+          test: /\.yml$/,
+          loader: "json-loader!yaml-loader",
         },
+        { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+        { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
       ],
     },
 

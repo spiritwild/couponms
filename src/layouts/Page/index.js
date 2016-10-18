@@ -2,6 +2,7 @@ import React, { PropTypes } from "react"
 import Helmet from "react-helmet"
 import invariant from "invariant"
 import { BodyContainer, joinUri } from "phenomic"
+import Link from "phenomic/lib/Link"
 
 import styles from "./index.css"
 
@@ -42,17 +43,31 @@ const Page = (
   ]
 
   return (
-    <div className={ styles.page }>
+    <div id="content_box">
       <Helmet
         title={ metaTitle }
         meta={ meta }
       />
-      {
-        head.title &&
-        <h1 className={ styles.heading }>{ head.title }</h1>
-      }
-      { header }
-      <BodyContainer>{ body }</BodyContainer>
+      <div className="single_post">
+        <div id="content_bg" className="singleCon">
+          <div className="breadcrumb">
+            <Link to="/" title="">Trang chủ</Link>
+            &nbsp;&nbsp;&raquo;&nbsp;&nbsp;
+          </div>
+          <header>
+            <h1 className="title single-title">
+              { head.title }
+            </h1>
+            <div className="tablePost">
+              { new Date(head.date).toDateString() } &nbsp;&nbsp;
+            </div>
+          </header>
+          <div className="post-single-content box mark-links">
+            <BodyContainer>{ body }</BodyContainer>
+          </div>
+        </div>
+      </div>
+
       { children }
       { footer }
     </div>

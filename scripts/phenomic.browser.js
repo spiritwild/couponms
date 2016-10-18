@@ -1,3 +1,5 @@
+import "whatwg-fetch"
+
 // Hot loading HRM Patch
 import "react-hot-loader/patch"
 
@@ -10,9 +12,16 @@ import store from "../src/store.js"
 import phenomicClient from "phenomic/lib/client"
 phenomicClient({ metadata, routes, store })
 
+require.context("../content", true, /\.(html|ico|jpe?g|png|gif|jpg)$/)
+
+
 // md files processed via phenomic-loader to JSON & generate collection
+
 let mdContext = require.context("../content", true, /\.md$/)
+
 mdContext.keys().forEach(mdContext)
+
+
 
 // hot loading
 if (module.hot) {

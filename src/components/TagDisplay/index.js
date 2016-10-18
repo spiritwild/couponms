@@ -1,7 +1,7 @@
 import React, { PropTypes } from "react"
 import Link from "react-router/lib/Link"
 
-export default class TagDisplay extends React.PureComponent {
+class TagDisplay extends React.PureComponent {
   static propTypes = {
     tag: PropTypes.string.isRequired,
   };
@@ -20,3 +20,5 @@ export default class TagDisplay extends React.PureComponent {
     )
   }
 }
+
+export default TagDisplay

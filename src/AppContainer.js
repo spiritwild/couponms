@@ -1,27 +1,32 @@
 import React, { PropTypes } from "react"
 
-import "./index.global.css"
-import "./highlight.global.css"
+import "./sass/main.scss"
 
 import Container from "./components/Container"
 import DefaultHeadMeta from "./components/DefaultHeadMeta"
 import Header from "./components/Header"
 import Content from "./components/Content"
 import Footer from "./components/Footer"
+import Ga from "./components/Ga"
 
-const AppContainer = (props) => (
-  <Container>
-    <DefaultHeadMeta />
-    <Header />
-    <Content>
-      { props.children }
-    </Content>
-    <Footer />
-  </Container>
-)
+const AppContainer = (props) => {
+  return (
+    <Ga params={ props.params }>
+      <Container>
+        <DefaultHeadMeta />
+        <Header />
+        <Content>
+          { props.children }
+        </Content>
+        <Footer />
+      </Container>
+    </Ga>
+  )
+}
 
 AppContainer.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+  params: PropTypes.object,
 }
 
 export default AppContainer
