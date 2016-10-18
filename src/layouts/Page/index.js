@@ -49,14 +49,15 @@ const Page = (
       <div className="single_post">
         <div id="content_bg" className="singleCon">
           <div className="breadcrumb">
-            <Link to="/" title="">Trang chủ</Link>&nbsp;&nbsp;&raquo;&nbsp;&nbsp;
+            <Link to="/" title="">{ "Trang chủ" }</Link>
+            { "&nbsp;&nbsp;&raquo;&nbsp;&nbsp;" }
           </div>
           <header>
             <h1 className="title single-title">
               { head.title }
             </h1>
             <div className="tablePost">
-              { new Date(head.date).toDateString() } &nbsp;&nbsp;
+              { new Date(head.date).toDateString() } { "&nbsp;&nbsp;" }
             </div>
           </header>
           <div className="post-single-content box mark-links">
