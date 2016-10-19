@@ -83,7 +83,15 @@
     "parser": "babel-eslint",
     "extends": [
       "eslint-config-i-am-meticulous/react"
-    ]
+    ],
+    "rules": {
+      "react/prefer-stateless-function": 0,
+      "react/no-unknown-property": 0,
+      "max-len": 0,
+      "no-unused-vars": 0,
+      "react/jsx-indent-props": 0,
+      "react/jsx-space-before-closing": 0
+    }
   },
   "stylelint": {
     "extends": "stylelint-config-standard"

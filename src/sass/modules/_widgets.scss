@@ -10,39 +10,42 @@
   }
 }
 
-#widget-mailchimp {
-  font-size: 15px;
-  background-color: #e0e8cc;
-  text-align: center;
-  h3 {
-    color: $headings-color;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-top: 20px;
+.et_bloom .et_bloom_optin_7 .et_bloom_form_content {
+  background-color: #e5e0da !important;
+}
 
+.et_bloom .et_bloom_optin_7 .zigzag_edge .et_bloom_form_content:before {
+  background: linear-gradient(45deg, transparent 33.33%, #e5e0da 33.333%, #e5e0da 66.66%, transparent 66.66%), linear-gradient(-45deg, transparent 33.33%, #e5e0da 33.33%, #e5e0da 66.66%, transparent 66.66%) !important;
+  background-size: 20px 40px !important;
+}
+
+.et_bloom .et_bloom_optin_7 .zigzag_edge.et_bloom_form_right .et_bloom_form_content:before, .et_bloom .et_bloom_optin_7 .zigzag_edge.et_bloom_form_left .et_bloom_form_content:before {
+  background-size: 40px 20px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .et_bloom .et_bloom_optin_7 .zigzag_edge.et_bloom_form_right .et_bloom_form_content:before, .et_bloom .et_bloom_optin_7 .zigzag_edge.et_bloom_form_left .et_bloom_form_content:before {
+    background: linear-gradient(45deg, transparent 33.33%, #e5e0da 33.333%, #e5e0da 66.66%, transparent 66.66%), linear-gradient(-45deg, transparent 33.33%, #e5e0da 33.33%, #e5e0da 66.66%, transparent 66.66%) !important;
+    background-size: 20px 40px !important;
   }
-  p {
-    margin: 8px 0 2px;
-    padding: 0 10px;
-  }
-  form {
-    padding-bottom: 10px;
-  }
-  input[type='text'], input[type='email'] {
-    border: 1px solid darken($light-grey, 25%);
-    color: darken($headings-color, 25%);
-    font-size: 15px;
-    margin-bottom: 10px;
-    width: 80%;
-  }
-  input[type='submit'] {
-    background: $green;
-    color: $white;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0 15px;
-    text-shadow: -1px -1px #1c5d28;
-    height: 40px;
-  }
+}
+
+.et_bloom .et_bloom_optin_7 .et_bloom_form_container .et_bloom_form_header {
+  background-color: #80b810 !important;
+}
+
+.et_bloom .et_bloom_optin_7 .et_bloom_form_content button {
+  background-color: #445a6d !important;
+}
+
+.et_bloom .et_bloom_optin_7 .et_bloom_form_content button {
+  background-color: #445a6d !important;
+}
+
+.et_bloom .et_bloom_optin_7 h2, .et_bloom .et_bloom_optin_7 h2 span, .et_bloom .et_bloom_optin_7 h2 strong {
+  font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
+}
+
+.et_bloom .et_bloom_optin_7 p, .et_bloom .et_bloom_optin_7 p span, .et_bloom .et_bloom_optin_7 p strong, .et_bloom .et_bloom_optin_7 form input, .et_bloom .et_bloom_optin_7 form button span {
+  font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
 }

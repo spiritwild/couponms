@@ -1,42 +1,53 @@
-import React, {PropTypes} from "react"
-import {Link} from "react-router"
+import React, { PropTypes } from "react"
+import { Link } from "react-router"
 import enhanceCollection from "phenomic/lib/enhance-collection"
 import site from "../../config.yml"
 
-const Header = (props, {metadata: {pkg}, collection}) => {
+const Header = (props, { metadata: { pkg }, collection }) => {
   const categories = enhanceCollection(collection, {
-    filter: {type: "Category"},
+    filter: { type: "Category" },
     sort: "title",
     reverse: true,
   })
   const rootCategories = categories.filter(category => (!category.parent))
   return (
-    <header className="navbar navbar-default navbar-fixed-top navbar-inverse">
-      <div className="container">
-        <div className="navbar-header">
-          <Link className="navbar-brand site" to="/">
-            { site.theme_settings.header_text }
-          </Link>
+    <header>
+      <div id="masthead" class="site-header clearfix">
+        <div className="container">
+          <div className="site-branding col-md-4">
+            <div id="logo">
+              <Link to="/" rel="home">
+                <img src={ site.theme_settings.logo } alt={ site.theme_settings.title }/>
+              </Link>
+            </div>
+          </div>
+          <div className="banner-header col-md-8">
+            <Link to={ site.theme_settings.banner.link } target="_blank" >
+              <img src={ site.theme_settings.banner.image } />
+            </Link>
+          </div>
         </div>
-        <div className="navbar-collapse collapse hidden-md hidden-sm hidden-xs">
-          <ul className="nav navbar-nav pull-right">
-            <li>
+      </div>
+      <nav className="navbar navbar-default secondary-bar">
+        <div className="container">
+          <ul className="nav navbar-nav sf-menu">
+            <li className="sf-menu">
               <Link to="/">
                   <span>
-                    <i className="fa fa-home"></i> Trang chủ
+                    <i className="fa fa-home"></i> { "Trang chủ" }
                   </span>
               </Link>
             </li>
-            <li>
+            <li className="sf-menu">
               <Link to="/archive">
                   <span>
-                    <i className="fa fa-list"></i> Bài viết
+                    <i className="fa fa-list"></i> { "Bài viết" }
                   </span>
               </Link>
             </li>
             {
               rootCategories.map((category) => (
-                <li className="dropdown primary-menu" key={ category.__url }>
+                <li className="dropdown primary-menu sf-menu" key={ category.__url }>
                   <Link key={ category.__url } to={ category.__url } className="dropdown-toggle" data-toggle="dropdown">
                     { category.title }
                   </Link>
@@ -55,7 +66,7 @@ const Header = (props, {metadata: {pkg}, collection}) => {
             }
           </ul>
         </div>
-      </div>
+      </nav>
     </header>
   )
 }

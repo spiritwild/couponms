@@ -3,7 +3,7 @@ title: Meizu Pro 5 cao cấp chính thức ra mắt, sử dụng chip của Gala
 type: Post
 layout: Post
 tags: [meizu]
-date: 2016-09-23
+date: 2015-09-23
 thumbnail: images/meizu-pro-5-cao-cap-chinh-thuc-ra-mat-su-dung-chip-cua-galaxy-s6-galaxy-note-5.jpg
 ---
 # Đây là chiếc điện thoại cao cấp nhất của Meizu.

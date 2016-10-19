@@ -10,11 +10,6 @@ const Post = ({ post }) => {
           <Link to={ post.__url } title={ post.title }>{ post.title }</Link>
         </h2>
         <div className="tablePost">
-          <span className="metadate hidden-small">
-            <div className="post_date">
-              { new Date(post.date).toDateString() }
-            </div>
-          </span>
           <span className="thecategories">
             
           </span>

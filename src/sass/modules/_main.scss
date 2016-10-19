@@ -1,3 +1,48 @@
+.container {
+  @media (min-width: $screen-lg-min) {
+    width: 980px;
+  }
+}
+
+#logo {
+  float: left;
+  margin: 0px 30px 0 0;
+}
+
+.secondary-bar {
+  background-color: $menu-bg-color;
+  border-radius: 0;
+  border: 0;
+  .sf-menu {
+    li.sf-menu {
+      a {
+        color: $white;
+        &:hover {
+          background-color: darken($menu-bg-color, 5%);
+        }
+      }
+      &:hover {
+        .dropdown-menu {
+          display: block !important;
+        }
+      }
+      .dropdown-menu {
+        a {
+          color: #555555;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-header {
+  float: right;
+  margin: 25px 0;
+}
+
 #wrapper {
   min-height: 100%;
   margin-bottom: -50px;
@@ -5,9 +50,8 @@
 }
 
 #wrap_content {
-  padding-top: 70px;
   .page {
-    padding-top: 17px;
+    padding-top: 10px;
     float: none;
     clear: both;
     min-height: 100%;
@@ -16,13 +60,12 @@
     margin-right: auto;
     overflow: visible;
   }
-  .sidebar {
-    padding-left: 30px;
-  }
 
   article {
     float: left;
     margin-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
     header {
       margin-bottom: 10px;
     }
@@ -41,10 +84,6 @@
     margin-bottom: 20px;
 
   }
-  .singleCon {
-    padding: 0 3%;
-
-  }
 
   .post {
     &.excerpt {
@@ -54,7 +93,7 @@
       border-left: 1px solid #dcdcdc;
       border-right: 1px solid #dcdcdc;
       background-color: $white;
-      padding: 3%;
+      padding: 3% 2%;
       width: 100%;
       position: relative;
     }

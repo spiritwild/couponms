@@ -37,35 +37,6 @@ const Homepage = (props, { collection }) => {
         </div>
         <PostList posts={ latestPosts } />
       </div>
-      <div className="posts">
-        {
-          // latestPosts.map((post) => (
-          //   <div key={ post.__url } className="post-teaser">
-          //     <header>
-          //       <h1>
-          //         <Link to={ post.__url } className="post-link">
-          //           { post.title }
-          //         </Link>
-          //       </h1>
-          //       <p className="meta">
-          //         {
-          //           post.tags && post.tags.map((tag) => (
-          //             <TagDisplay key={ tag } tag={ tag } />
-          //           ))
-          //         }
-          //         <span>{ new Date(post.date).toDateString() }</span>
-          //       </p>
-          //     </header>
-          //     <div className="excerpt">
-          //       <p>{ post.description }</p>
-          //       <Link to={ post.__url } className="button">
-          //         { site.theme_settings.str_continue_reading }
-          //       </Link>
-          //     </div>
-          //   </div>
-          // ))
-        }
-      </div>
     </BaseLayout>
   )
 }
