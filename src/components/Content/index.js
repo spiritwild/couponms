@@ -14,11 +14,7 @@ const Content = (props) => {
             <div className="sidebar col-md-4 hidden-small">
               <div id="sidebar" className="g">
                 <div className="sidebar">
-                  <ul className="sidebar_list">
-                    <li className="widget widget-sidebar et_bloom" id="widget-mailchimp">
-                      <MailChimp />
-                    </li>
-                  </ul>
+                  <MailChimp />
                 </div>
               </div>
             </div>
