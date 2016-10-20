@@ -50,7 +50,7 @@ const Page = (
         <div id="content_bg" className="singleCon">
           <div className="breadcrumb">
             <Link to="/" title="">{ "Trang chủ" }</Link>
-            { "&nbsp;&nbsp;&raquo;&nbsp;&nbsp;" }
+            { "\u00a0\u00a0\u00bb\u00a0\u00a0" }
           </div>
           <header>
             <h1 className="title single-title">

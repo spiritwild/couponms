@@ -18,8 +18,8 @@ const AppContainer = (props) => {
         <Content>
           { props.children }
         </Content>
-        <Footer />
       </Container>
+      <Footer />
     </Ga>
   )
 }

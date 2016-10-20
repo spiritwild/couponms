@@ -2,11 +2,7 @@ import React, { PropTypes } from "react"
 import enhanceCollection from "phenomic/lib/enhance-collection"
 
 import BaseLayout from "../BaseLayout"
-// import Link from "phenomic/lib/Link"
-// import TagDisplay from "../../components/TagDisplay"
 import PostList from "../../components/PostList"
-// import Page from "../Page"
-// import PagesList from "../../components/PagesList"
 import site from "../../config.yml"
 
 const numberOfLatestPosts = 6

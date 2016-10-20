@@ -1,21 +1,20 @@
 import React from "react"
-
-import styles from "./index.css"
+import Link from "phenomic/lib/Link"
 
 const Footer = () => (
-  <footer className={ styles.footer }>
-    { /* If you like Phenomic, this is a way to share the love ;) */ }
-    <p>
-      <a
-        href={ process.env.PHENOMIC_HOMEPAGE }
-        className={ styles.phenomicReference }
-      >
-        { "Website generated with " }
-        <span className={ styles.phenomicReferenceName }>
-          {  `<${ process.env.PHENOMIC_NAME} />` }
-        </span>
-      </a>
-    </p>
+  <footer id="footer" className="site-footer">
+    <div id="site-bottom" className="clearfix">
+      <div className="copyright container">
+        <div className="left">
+          { "\u00a9\u00a0" + new Date().getFullYear() + "\u00a0" }
+          <Link to="/">
+            <strong>{ "Couponmuasam" }</strong>
+          </Link>
+          { ". Powered by " }
+          <Link to="/">{ "DungNT" }</Link>
+        </div>
+      </div>
+    </div>
   </footer>
 )
 
