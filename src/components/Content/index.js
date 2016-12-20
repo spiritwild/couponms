@@ -21,9 +21,6 @@ const Content = (props) => {
         </div>
       </div>
     </div>
-    // <div className={ styles.content }>
-    //   { props.children }
-    // </div>
   )
 }
 

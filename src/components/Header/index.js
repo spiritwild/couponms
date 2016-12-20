@@ -12,23 +12,7 @@ const Header = (props, { metadata: { pkg }, collection }) => {
   const rootCategories = categories.filter(category => (!category.parent))
   return (
     <header>
-      <div id="masthead" class="site-header clearfix">
-        <div className="container">
-          <div className="site-branding col-md-4">
-            <div id="logo">
-              <Link to="/" rel="home">
-                <img src={ site.theme_settings.logo } alt={ site.theme_settings.title }/>
-              </Link>
-            </div>
-          </div>
-          <div className="banner-header col-md-8">
-            <Link to={ site.theme_settings.banner.link } target="_blank" >
-              <img src={ site.theme_settings.banner.image } />
-            </Link>
-          </div>
-        </div>
-      </div>
-      <nav className="navbar navbar-default secondary-bar">
+      <nav className="navbar navbar-default secondary-bar navbar-fixed-top">
         <div className="container">
           <ul className="nav navbar-nav sf-menu">
             <li className="sf-menu">
@@ -67,49 +51,26 @@ const Header = (props, { metadata: { pkg }, collection }) => {
           </ul>
         </div>
       </nav>
+      <div id="masthead" class="site-header clearfix">
+        <div className="container">
+          <div className="site-branding col-md-4">
+            <div id="logo">
+              <Link to="/" rel="home">
+                <img src={ site.theme_settings.logo } alt={ site.theme_settings.title }/>
+              </Link>
+            </div>
+          </div>
+          <div className="banner-header col-md-8">
+            <Link to={ site.theme_settings.banner.link } target="_blank" >
+              <img src={ site.theme_settings.banner.image } />
+            </Link>
+          </div>
+        </div>
+      </div>
+
     </header>
   )
 }
-
-// import styles from "./index.css"
-// import Svg from "react-svg-inline"
-// import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
-// import gitHubSvg from "../icons/iconmonstr-github-1.svg"
-
-// const Header = (props, { metadata: { pkg } }) => (
-//   <header className={ styles.header }>
-//     <nav className={ styles.nav }>
-//       <div className={ styles.navPart1 }>
-//         <Link
-//           className={ styles.link }
-//           to="/"
-//         >
-//           { "Home" }
-//         </Link>
-//       </div>
-//       <div className={ styles.navPart2 }>
-//         { pkg.twitter &&
-//           <a
-//             href={ `https://twitter.com/${pkg.twitter}` }
-//             className={ styles.link }
-//           >
-//             <Svg svg={ twitterSvg } cleanup />
-//               { "Twitter" }
-//           </a>
-//         }
-//         { pkg.repository &&
-//           <a
-//             href={ pkg.repository }
-//             className={ styles.link }
-//           >
-//             <Svg svg={ gitHubSvg } cleanup />
-//             { "GitHub" }
-//           </a>
-//         }
-//       </div>
-//     </nav>
-//   </header>
-// )
 
 Header.contextTypes = {
   metadata: PropTypes.object.isRequired,

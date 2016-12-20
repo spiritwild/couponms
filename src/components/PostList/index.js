@@ -9,8 +9,15 @@ const PostList = ({ posts }) => {
           <Post post={ post } key={ post.__url } />
         ))
       }
-      <div className="pagination"></div>
     </div>
+    // <div id="content_bg" className="singleCon">
+    //   {
+    //     posts.map((post) => (
+    //       <Post post={ post } key={ post.__url } />
+    //     ))
+    //   }
+    //   <div className="pagination"></div>
+    // </div>
   )
 }
 
