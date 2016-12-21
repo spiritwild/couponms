@@ -22,7 +22,6 @@
       font-weight: 700;
       line-height: 1em;
       padding: 10px;
-      border-radius: 3px;
       width: 100%;
       border-color: transparent;
       &:focus {
@@ -76,6 +75,9 @@
       background-color: #445a6d;
       width: 100%;
       padding: 10px;
+      &.btn {
+        border-radius: 0;
+      }
       &:hover {
         background-color: darken(#445a6d, 3%);
       }

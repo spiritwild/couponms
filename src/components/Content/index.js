@@ -7,9 +7,9 @@ const Content = (props) => {
       <div className="container">
         <div className="page">
           <div className="content">
-            <article className="article col-md-8 col-xs-12">
+            <main id="main" className="site-main col-md-8 col-xs-12" role="main">
               { props.children }
-            </article>
+            </main>
             <div className="sidebar col-md-4 hidden-small">
               <div id="sidebar" className="g">
                 <div className="sidebar">

@@ -38,7 +38,7 @@ const Homepage = (props, { collection }) => {
               </h4>
               <p className="more-from-category">
                 <Link to="/review" title="review mua hàng">
-                  Xem thêm review khác
+                  { 'Xem thêm review khác' }
                 </Link>
               </p>
             </div>
