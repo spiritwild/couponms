@@ -51,7 +51,7 @@ const Header = (props, { metadata: { pkg }, collection }) => {
           </ul>
         </div>
       </nav>
-      <div id="masthead" class="site-header clearfix">
+      <div id="masthead" className="site-header clearfix">
         <div className="container">
           <div className="site-branding col-md-4">
             <div id="logo">

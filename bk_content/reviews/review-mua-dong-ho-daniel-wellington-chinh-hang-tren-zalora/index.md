@@ -3,7 +3,7 @@ title: Review mua Đồng Hồ Daniel Wellington Chính Hãng trên Zalora
 categories: [review]
 tags: [zalora, review, dong ho]
 date: 2016-12-21
-type: Review
+type: Post
 layout: Post
 ---
 
