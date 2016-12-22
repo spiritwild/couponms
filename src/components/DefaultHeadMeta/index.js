@@ -13,9 +13,10 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
         { name: "twitter:site", content: `@${ pkg.twitter }` },
       ] }
       script={ [
-        { src: "https://cdn.polyfill.io/v2/polyfill.min.js" },
-        { src: "//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" },
-        { src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" },
+        { src: "https://cdn.polyfill.io/v2/polyfill.min.js", type: "text/javascript" },
+        { src: "//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", type: "text/javascript" },
+        { src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type: "text/javascript" },
+        { src: "//couponmuasam.disqus.com/embed.js", "data-timestamp": +new Date() },
       ] }
     />
 

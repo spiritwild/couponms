@@ -7,12 +7,12 @@ const BaseLayout = (props, context) => {
   const { pkg } = context.metadata
   const {
     __filename,
-    // __url,
+    __url,
     head,
     body,
     header,
     footer,
-  } = props
+    } = props
   invariant(
     typeof head.title === "string",
     `Your page '${ __filename }' need a title`
@@ -27,7 +27,7 @@ const BaseLayout = (props, context) => {
     },
     {
       property: "og:url",
-      // content: joinUri(process.env.PHENOMIC_USER_URL, __url || ""),
+      content: joinUri(process.env.PHENOMIC_USER_URL, __url || ""),
     },
     {
       property: "og:description", content: head.description,
@@ -51,7 +51,7 @@ const BaseLayout = (props, context) => {
 
   return (
     <div className={ props.className }>
-      <Helmet title={ metaTitle } meta={ meta } />
+      <Helmet title={ metaTitle } meta={ meta }/>
       { header }
       {
         body &&
@@ -66,7 +66,7 @@ const BaseLayout = (props, context) => {
 BaseLayout.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   __filename: PropTypes.string,
-  // __url: PropTypes.string.isRequired,
+  __url: PropTypes.string,
   head: PropTypes.object.isRequired,
   body: PropTypes.string,
   header: PropTypes.element,

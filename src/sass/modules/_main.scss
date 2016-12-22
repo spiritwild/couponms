@@ -236,3 +236,10 @@ a {
   text-align: left;
 }
 
+.rrssb-buttons {
+  width: calc(100% - 150px) !important;
+  float: right;
+  li {
+    width: 33%;
+  }
+}

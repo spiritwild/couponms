@@ -5,6 +5,7 @@ tags: [adayroi, huong dan]
 categories: [huong-dan]
 date: 2015-12-24
 thumbnail: images/logo.png
+layout: Post
 ---
 
 Bạn muốn mua hàng trên Adayroi nhưng còn băn khoăn và bỡ ngỡ thì bài viết hướng dẫn cách mua hàng trên Adayroi sau đây sẽ rất hữu ích cho bạn. Không chỉ đưa ra các bước tiến hành đặt mua sản phẩm thế nào mà còn chia sẻ những kinh nghiệm và bí quyết để bạn mua được với giá rẻ nhất.

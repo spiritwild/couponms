@@ -5,11 +5,16 @@ article {
     padding: 0 0 25px;
   }
   .share-container {
-    border-bottom: 1px solid gainsboro;
-    border-top: 1px solid gainsboro;
+    //border-bottom: 1px solid gainsboro;
+    //border-top: 1px solid gainsboro;
     padding: 10px !important;
-    margin: 15px;
+    &:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
     .label {
+      text-align: left;
       float: left;
       display: block;
       width: 150px;
@@ -17,6 +22,15 @@ article {
       padding-top: 7px;
       color: $text-color;
       font-weight: 500;
+    }
+  }
+  .entry-content {
+    margin-top: 20px;
+    word-wrap: break-word;
+  }
+  .byline {
+    .entry-comment, .entry-date, .entry-view {
+      padding-right: 15px;
     }
   }
 }
