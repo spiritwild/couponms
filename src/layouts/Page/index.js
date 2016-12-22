@@ -106,6 +106,7 @@ const Page = ({
       </article>
       <div className="comment-area" id="comments">
         <div id="disqus_thread"></div>
+        <Helmet script={ [ { src: "//couponmuasam.disqus.com/embed.js", "data-timestamp": +new Date() } ] } />
       </div>
     </div>
   )
