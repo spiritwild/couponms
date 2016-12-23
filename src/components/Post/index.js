@@ -4,58 +4,22 @@ import TagDisplay from "../TagDisplay"
 
 const Post = ({ post }) => {
   return (
-    <div className="entry col-xs-12" key={ post.__url }>
-      <Link to={ post.__url } title={ post.title } rel="nofollow" className="alignleft">
+    <article className="hentry row post type-post entry clearfix col-xs-12" key={ post.__url }>
+      <Link to={ post.__url } title={ post.title } className="post-thumbnail col-md-6">
         <img src={ post.__url + "/" + post.thumbnail }/>
       </Link>
-      <header className="entry-header">
-        <h2 className="entry-title">
-          <Link to={ post.__url } title={ post.title } rel="nofollow">
-            { post.title }
-          </Link>
-        </h2>
-      </header>
-    </div>
-    // <div className="post excerpt" key={ post.__url }>
-    //   <header>
-    //     <h2 className="title">
-    //       <Link to={ post.__url } title={ post.title }>{ post.title }</Link>
-    //     </h2>
-    //     <div className="tablePost">
-    //       <span className="thecategories">
-    //
-    //       </span>
-    //       {
-    //         post.tags &&
-    //           <span className="tags">
-    //             { "Tags: " }
-    //             {
-    //               post.tags.map((tag) => (
-    //                 <TagDisplay key={ tag } tag={ tag } />
-    //               ))
-    //             }
-    //           </span>
-    //       }
-    //     </div>
-    //     {
-    //       post.thumbnail &&
-    //       <div className="featured-thumbnail">
-    //         <Link to={ post.__url } title={ post.title } rel="nofollow">
-    //           <img src={ post.__url + "/" + post.thumbnail } />
-    //         </Link>
-    //       </div>
-    //     }
-    //     <div className="post-content image-caption-format-1">
-    //       { post.description }
-    //     </div>
-    //     <div className="readMore">
-    //       <Link to={ post.__url } title={ post.title }>
-    //         { "Đọc tiếp" }
-    //       </Link>
-    //     </div>
-    //   </header>
-    //
-    // </div>
+      <h2 className="entry-title">
+        <Link to={ post.__url }>{ post.title }</Link>
+      </h2>
+      <div className="entry-meta">
+        <span className="entry-date">
+          <i className="fa fa-clock-o"></i>&nbsp;{ new Date(post.date).toLocaleDateString() }
+        </span>
+      </div>
+      <div className="entry-summary">
+        { post.description }
+      </div>
+    </article>
   )
 }
 

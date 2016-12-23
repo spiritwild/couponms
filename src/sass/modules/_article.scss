@@ -1,6 +1,5 @@
 article {
   &.hentry {
-    border-bottom: 1px solid gainsboro;
     position: relative;
     padding: 0 0 25px;
   }
@@ -37,8 +36,19 @@ article {
 
 #reviews {
   padding-top: 20px;
-  padding-left: 0;
-  padding-right: 0;
+  .grid {
+    margin-left: -10px;
+    margin-right: -10px;
+    article {
+      &.block {
+        padding-left: 10px;
+        padding-right: 10px;
+        .entry-title {
+          float: left;
+        }
+      }
+    }
+  }
 }
 
 .more-from-category {
@@ -81,13 +91,17 @@ article {
 
 .hentry {
   .entry-thumbnail {
-    margin: 0 0 5px 0;
+    margin: 0 0px 5px 0;
     width: 100%;
+    float: left;
+    height: 120px;
   }
   .entry-title {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.3;
     margin-bottom: 10px;
+    height: 36px;
+    text-overflow: ellipsis;
     a {
       color: $black;
       font-weight: bold;
@@ -95,5 +109,47 @@ article {
         color: $red;
       }
     }
+  }
+  .entry-meta {
+    font-size: 12px;
+  }
+  .entry-summary {
+    margin-top: 5px;
+  }
+}
+
+#vouchers, #reviews {
+  padding-left: 0;
+  padding-right: 0;
+
+  .more-from-category {
+    text-align: right;
+  }
+}
+
+#vouchers {
+  .grid {
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+      border-bottom: 1px solid gainsboro;
+      .post-thumbnail {
+        padding-left: 0;
+        clear: both;
+      }
+      .entry-title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.3;
+        margin-bottom: 0;
+        height: auto;
+      }
+      .entry-summary {
+        margin-top: 10px;
+      }
+    }
+  }
+  .more-from-category {
+    margin-bottom: 0;
   }
 }

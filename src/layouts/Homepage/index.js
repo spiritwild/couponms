@@ -4,6 +4,7 @@ import BaseLayout from "../BaseLayout"
 import PostList from "../../components/PostList"
 import Reviews from "../../components/Reviews"
 import Link from "phenomic/lib/Link"
+import Vouchers from "../../components/Vouchers"
 
 const numberOfLatestPosts = 6
 
@@ -18,6 +19,11 @@ const Homepage = (props, { collection }) => {
     sort: "date",
     reverse: true,
   }).slice(0, numberOfLatestPosts)
+  const latestVouchers = enhanceCollection(collection, {
+    filter: { type: "Voucher" },
+    sort: "date",
+    reverse: true,
+  }).slice(0, numberOfLatestPosts)
   return (
     <BaseLayout { ...props }>
       <div className="feature_box">
@@ -25,11 +31,7 @@ const Homepage = (props, { collection }) => {
       <div id="content_box">
         <div id="content_widget">
         </div>
-        <div className="home-top">
-          <div className="featured-content featured-post">
-            <PostList posts={ latestGuides }/>
-          </div>
-        </div>
+        <Vouchers vouchers={ latestVouchers }/>
         <Reviews reviews={ latestReviews }/>
       </div>
     </BaseLayout>
